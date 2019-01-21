@@ -1,1 +1,6 @@
 /build/
+/MyServlet/nbproject/private/
+/src/MyServlet/nbproject/private/
+/src/com/MyServlet/nbproject/private/
+/HelloWorldServlet/nbproject/private/
+/HelloWorldServlet/build/
