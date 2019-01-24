@@ -1,4 +1,3 @@
-
 package com.collections;
 
 import java.util.ArrayList;
@@ -139,9 +138,9 @@ public class MyCollections {
     
     // Main method must be in the code
     public static void main(String[] args) {
-        arrayList();
+        //arrayList();
         dequeForMe();
-        hashMeUp();
-        hashMapExample();
+        //hashMeUp();
+        //hashMapExample();
     }
 }
