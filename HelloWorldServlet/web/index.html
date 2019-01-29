@@ -7,14 +7,27 @@
         <title>Submit your name</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                background-color: #ccc;
+            }
+            h1 {
+                text-align: center;
+            }
+        </style>
     </head>
     <body>
-        <h1>Put name here</h1>
+        <h1>Welcome To My Website</h1>
         <div>
             <form action="HelloWorld">
-                Enter First name: <input type="text" name="firstname"><br>
-                Enter Last name : <input type="text" name="lastname"><br>
-                <input type="submit" value="submit">
+                <fieldset>
+                    <legend>Personal Information:</legend>
+                        Enter First name:<br>
+                        <input type="text" name="firstname"><br>
+                        Enter Last name :<br>
+                        <input type="text" name="lastname"><br>
+                        <input type="submit" value="submit">
+                </fieldset>
             </form>
         </div>   
     </body>
