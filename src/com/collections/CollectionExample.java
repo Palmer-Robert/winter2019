@@ -36,7 +36,7 @@ public class CollectionExample {
         System.out.println("\n" + goodGuys);
         
         System.out.println("\n");
-        System.out.println(goodGuys.size());
+        System.out.println(goodGuys.size());// Returns the size of the list in integer.
         
         System.out.println("\n");
         goodGuys.add("Black Widow");
@@ -53,11 +53,38 @@ public class CollectionExample {
         }
     }
     
+    private static void myHash() {
+        
+    }
+    
+    private static void myTreeSet() {
+        // Tree set object created
+        TreeSet ts = new TreeSet();
+        
+        //Add an element to the tree set
+        ts.add("C");
+        ts.add("A");
+        ts.add("B");
+        ts.add("E");
+        ts.add("F");
+        ts.add("D");
+        
+        //This should print the list in alphabetical order.
+        for(Object i : ts) {
+        System.out.println(i);
+        }
+        
+        //Show how many elements there are in this object
+        System.out.println(ts.size());
+    }
+    
     
     
     
     public static void main(String[] args) {
         // This is where we will call our methods
-        heroArray();
+        //heroArray();
+        //myHash();
+        myTreeSet();
     }
 }

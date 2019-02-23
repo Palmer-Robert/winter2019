@@ -18,19 +18,24 @@ public class HelloWorld extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            String fname = request.getParameter("firstname");
-            String lname = request.getParameter("lastname");
+                response.setContentType("text/html;charset=UTF-8");
+                try (PrintWriter out = response.getWriter()) {
+                    String fname = request.getParameter("firstname");
+                    String lname = request.getParameter("lastname");
             
-            out.println("Hello " + fname + " " + lname + ". Welcome to my page!");
-        }
+                    if((fname.isEmpty()) && (lname.isEmpty())) {
+                        out.println("You did not enter your name!");
+                    } else {
+                        out.println("Your name is " + fname + " " + lname + ".");
+                }
+            }
     }
 
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+            
     }
 }
+

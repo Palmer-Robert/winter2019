@@ -83,6 +83,7 @@ public class MyCollections {
         HashSet<String> warrior = new HashSet<String>();
         
         // Warrior names being added using the add() method
+        // Returns these names in alphabetical order
         warrior.add("Ryu");
         warrior.add("Guile");
         warrior.add("Ken");
@@ -138,9 +139,9 @@ public class MyCollections {
     
     // Main method must be in the code
     public static void main(String[] args) {
-        arrayList();
-        dequeForMe();
+        //arrayList();
+        //dequeForMe();
         hashMeUp();
-        hashMapExample();
+        //hashMapExample();
     }
 }

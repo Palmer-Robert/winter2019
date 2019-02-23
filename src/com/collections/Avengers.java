@@ -1,5 +1,6 @@
-
 package com.collections;
+
+import static com.collections.AvengerArray.arrayList;
 
 /**
  *
@@ -13,7 +14,7 @@ public class Avengers {
     String power;
     
     public static void main(String[] args) {
-        
+        arrayList();
     }
 
     public String getName() {
