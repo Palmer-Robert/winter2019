@@ -1,5 +1,7 @@
 package com.threads;
 
+import java.util.Scanner;
+
 /**
  * Sandbox code
  */
@@ -13,21 +15,26 @@ public class BankAccount implements Runnable{
     
     // Run method
     public void run(){
-        makeWithdrawal(75);
+        makeWithdrawal();
         if(balance < 0){
             System.out.println("Money overdrawn!");
         }
     }
     
-    private void makeWithdrawal(int amount){
+    private synchronized void makeWithdrawal(){
+        
+        Scanner cashout = new Scanner(System.in);
+        System.out.println("Enter amount: ");
+        
+        int amount = cashout.nextInt();
+        int bal = balance -= amount;
+        System.out.println("Balance: " + bal);
         if(balance >= amount){
-            System.out.println(Thread.currentThread().getName() + " withdrawing ...");
-            balance -= amount;
-            System.out.println(Thread.currentThread().getName() + " has withdrawn $" + amount);
+            System.out.println("\n" + Thread.currentThread().getName() + " has withdrawn $" + amount);
             
         } else if(balance <= 0){
-            
             System.out.println("Sorry, " + Thread.currentThread().getName() + ". Insufficient funds!");
+               
         }
     }
 }
